@@ -17,7 +17,7 @@ nchnls = 2
 instr 1
 
 
-kSignal oscili 0.1, 400; la variabile di tipo "a" è una variabile audio, vuol dire che è in relazione alla frequenza di campionamento
+aSignal oscili 0.1, 400; la variabile di tipo "a" è una variabile audio, vuol dire che è in relazione alla frequenza di campionamento
 ;la utilizzeremo per tutti i flussi audio (es. per ascoltare una sinusoide, per ascoltare l'audio che catturiamo dall'esterno, quando abbiamo bisogno di un controllo più dettagliato)
 ; ricordiamoci che la frequenza di campionamneto (audio) è il numero campioni disponibili nell'unità di tempo, ed è il massimo di risoluzione audio che possiamo avere in un sistema
 
