@@ -19,6 +19,7 @@
 
         instr 1
 
+
             aSignal oscili 0.1, 400
             ;la variabile di tipo "a" è una variabile audio, vuol dire che è in relazione alla frequenza di campionamento
             ;la utilizzeremo per tutti i flussi audio (es. per ascoltare una sinusoide, per ascoltare l'audio che catturiamo dall'esterno, quando abbiamo bisogno di un controllo più dettagliato)
