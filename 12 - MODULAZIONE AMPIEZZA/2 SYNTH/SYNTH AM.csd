@@ -83,9 +83,9 @@
 
             aAmpMod oscili gkAMampMod, gkAMfreqMod;segnale modulante
 
-            aSumAM0 = (aSum * aAmpMod) + aAmpMod;modulazione d'ampiezza
+            aSumRM = aSum * aAmpMod;modulazione ad anello
 
-            aSumAM = (aSumAM0 + aSum) * aEnv;moltiplico per inviluppo 
+            aSumAM = (aSumRM + aSum) * aEnv;modulazione di ampiezza e moltiplico per inviluppo 
 
             outs aSumAM, aSumAM
 
