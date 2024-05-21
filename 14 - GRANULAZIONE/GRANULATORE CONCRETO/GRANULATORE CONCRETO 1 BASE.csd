@@ -261,11 +261,13 @@
 
         ;SIGNAL
         if gichans==2 then
-        aSigL lposcil iAmpTot, iFreq , 0, 0, gitableL,iPhase  ;osclillatore che legge il sample
-        aSigR lposcil iAmpTot, iFreq , 0, 0, gitableR,iPhase ;osclillatore che legge il sample
+
+        aSigL lposcil iAmpTot, -iFreq , 0, 0, gitableL,iPhase  ;osclillatore che legge il sample
+        aSigR lposcil iAmpTot, -iFreq , 0, 0, gitableR,iPhase ;osclillatore che legge il sample
         else
-        aSigL lposcil iAmpTot, iFreq , 0, 0, gitableL,iPhase  ;osclillatore che legge il sample
-        aSigR lposcil iAmpTot, iFreq , 0, 0, gitableL,iPhase ;osclillatore che legge il sample
+
+        aSigL lposcil iAmpTot, -iFreq , 0, 0, gitableL,iPhase  ;osclillatore che legge il sample
+        aSigR lposcil iAmpTot, -iFreq , 0, 0, gitableL,iPhase ;osclillatore che legge il sample
         endif
 
         aSig = (aSigL + aSigR) / 2

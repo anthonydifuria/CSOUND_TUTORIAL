@@ -19,8 +19,8 @@
 
     instr 1
 
-        ihopsize = 32 
-        ifftsize = 4096  
+        ihopsize = 32
+        ifftsize = 4096 
         iolaps = ifftsize/ihopsize 
         ibw = sr/ifftsize
         kcnt init 0 
@@ -33,7 +33,7 @@
         kCent[] init ifftsize
         kSpread[] init ifftsize
 
-        a1  gauss 1;SEGNALE 
+        a1  oscili 1,100;SEGNALE 
  
         if kcnt == ihopsize then  
             kWin[] window kIn,krow*ihopsize
@@ -49,7 +49,7 @@
                 kIndex += 1
             od
             kCENROID sumarray kCent;SOMMA
-            ;printk 0.1, kCENROID
+            printk 0.5, kCENROID
 
             kIndex2 = 0
             until kIndex2 == ifftsize / 2  do
@@ -57,7 +57,7 @@
                 kIndex2 += 1
             od
             kSPREAD sumarray (kSpread)
-            printk 0.1, sqrt(kSPREAD) / 7000
+            ;printk 0.1, sqrt(kSPREAD)
    
             krow = (krow+1)%iolaps
             kcnt = 0

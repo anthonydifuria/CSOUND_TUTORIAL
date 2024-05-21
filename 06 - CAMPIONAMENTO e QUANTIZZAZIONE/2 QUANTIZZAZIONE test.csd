@@ -18,11 +18,11 @@
 
             setksmps 1
 
-            kbit = 4
+            kbit = 24
             ksrate = sr
 
-            aEnv linseg 0, 0.1, 1
-            aSig oscili 0.5, 400
+            aEnv linseg 0, 0.1, 1, 0.9, 0
+            aSig oscili 0.5, 440
             aSigEnv = aSig * aEnv
 
             kbits = 2^kbit                           ;bit depth (1 to 16)

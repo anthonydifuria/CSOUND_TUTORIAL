@@ -19,20 +19,20 @@
 
         instr 1
 
-            ktrig metro 10
-            gkDur = 2
+            ktrig metro 20
+            gkDur = 5
             schedkwhen ktrig, 0, 0, 2, 0, gkDur
 
         endin
 
         instr 2
-            iFactor = (rnd(100) + 1)
+            iFactor = (rnd(10000) + 1)
             iScaleFactor = iFactor; da 1 a sr/2
             iSR = 44100 / iScaleFactor
 
             kFold = sr / iSR ;CAMBIO FOLDOVER
 
-            aSig oscili 0.1, 300 + rnd(10)
+            aSig oscili 0.001 / int(rnd(10) + 1), 100 * int(rnd(10) + 1)
             aEnv linseg 0, i(gkDur), 1, i(gkDur), 0
 
             a0ut fold aSig , kFold ;FOLDOVER

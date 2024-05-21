@@ -20,7 +20,7 @@
 
         instr 1
 
-            giTableSize = 2 * 44100 //LUNGHEZZA BUFFER SCRITTURA
+            giTableSize = 512 //LUNGHEZZA BUFFER SCRITTURA
             giTableCopy ftgen   0, 0, -giTableSize, 2, 0
 
             iSR = sr//FREQUENZA DI CAMPIONAMENTO

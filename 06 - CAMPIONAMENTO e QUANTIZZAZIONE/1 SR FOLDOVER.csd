@@ -18,7 +18,7 @@
     0dbfs = 1
 
     instr 1
-        iScaleFactor = 1; da 1 a sr/2
+        iScaleFactor = 4; da 1 a sr/2
         iSR = 44100 / iScaleFactor
 
         kFold = sr / iSR ;CAMBIO FOLDOVER

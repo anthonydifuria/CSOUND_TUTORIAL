@@ -188,6 +188,7 @@
 
         ;STRUEMENTO
         instr 2
+        print 4*taninv(1.0)
 
             ;INVILUPPO
             aenv poscil3 1, 1/i(gkDurSum), giFunc[cabbageGetValue:i("func")-1]
